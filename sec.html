@@ -59,7 +59,7 @@
           index++; 
         } console.log(`the word ${randoWo} is written ${sumWo} times` );
      }
-     
+     //sum of numbers in array
      function chk4() {
         const sumNum = armix.reduce((acc, val) => {
           if (typeof val === "number") {
@@ -70,12 +70,14 @@
           }, 0);
           console.log(`the sum of all the numbers in that array is ${sumNum}`);
      }
+     //highest lowest and average of the array
      function chk5(){
         console.log(`the array is [10,15,8,2,5,65,34,1,89,7].`);
         console.log(`the highest number in the array is ${hiNum}.`);
         console.log(`the highest number in the array is ${loNum}.`);
         console.log(`the average of all number in the array is ${average}.`);
      }
+     //lower then 16 and sum
      function chk6() {
         console.log(`The numbers lower than 16 are: ${arFilter}.`);
         console.log(`Their sum is: ${filterSum}.`);
