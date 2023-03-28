@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: rgb(229, 255, 0);">
+
+    <!--box-->
+    <div class="box" style="background-color: rgb(208, 31, 243);">
+        <h1>To see HW answers go to console</h1>
+        <div class="btn-group">
+            <form method="get" action="index.html">
+                <button onclick="visitPage()">last page</button></a>
+            </form>
+            <!--chk list-->
+            <button onclick="chk1();chk2();chk3();chk4();chk5();chk6()">check</button>
+        </div>
+    </div>
+
+    <!--script-->
+    <script>
+        //let list
+      let ar=["mom","dad","no","yes","child","football","court","school","jinx","tango","why","why","no","no","child","scholl","school"]
+      let index= 0;
+      let suml = 0;
+      let armix=["mom","dad","no","yes","child","football","court","school","jinx",1,10,18,2,5]
+      const randoWo = ar[Math.floor(Math.random()*ar.length)] 
+      const sumWo = ar.filter(ar => ar === randoWo).length;
+      const numAr = [10,15,8,2,5,65,34,1,89,7]
+      const hiNum = Math.max(...numAr)
+      const loNum = Math.min(...numAr)
+      const numArSum = numAr.reduce((acc, val) => acc + val, 0);
+      const average = numArSum / numAr.length;
+      const arFilter = numAr.filter(num => num < 16)
+      const filterSum = arFilter.reduce((acc, val) => acc + val, 0);
+      //word length 3+
+      function chk1() {
+        for (let index = 0; index < ar.length; index++) {
+            ar[index].length > 3 && console.log(ar[index]);
+        } 
+     }
+     //array letter sum
+     function chk2() {
+        while (index < ar.length) {
+         if (suml += ar[index].length);
+          index++; 
+        } console.log(`the array letter sum is ${suml}`);
+     }
+     //check how many times a random word from the array is written
+     function chk3() {
+        while (index < ar) {
+         if (ar[index] == randoWo) ;
+          index++; 
+        } console.log(`the word ${randoWo} is written ${sumWo} times` );
+     }
+     
+     function chk4() {
+        const sumNum = armix.reduce((acc, val) => {
+          if (typeof val === "number") {
+           return acc + val;
+         } else {
+           return acc;
+         }
+          }, 0);
+          console.log(`the sum of all the numbers in that array is ${sumNum}`);
+     }
+     function chk5(){
+        console.log(`the array is [10,15,8,2,5,65,34,1,89,7].`);
+        console.log(`the highest number in the array is ${hiNum}.`);
+        console.log(`the highest number in the array is ${loNum}.`);
+        console.log(`the average of all number in the array is ${average}.`);
+     }
+     function chk6() {
+        console.log(`The numbers lower than 16 are: ${arFilter}.`);
+        console.log(`Their sum is: ${filterSum}.`);
+     }
+    </script>
+
+</body>
+
+</html>
